@@ -46,11 +46,11 @@
           <td>{{ request.amount | currency }}</td>
           <td>
             <button class="btn btn-accept btn-sm me-3" (click)="acceptRequest(request.requestId, request)"
-              [disabled]="request.status === 'Pending'|| request.status === 'Rejected' || request.status === 'Returned' ||  request.status === 'Waiting' ">
+              [disabled]="request.status === 'Pending'|| request.status === 'Rejected' || request.status === 'Returned'  ">
               {{request.status==='Pending' ? '✓ Accepted' : '✓ Accept'}}
 
             </button>
-            <button class="btn btn-decline btn-sm" (click)="declineRequest(request.requestId)" [disabled]="request.status === 'Rejected' || request.status === 'Pending' || request.status === 'Returned' || request.status === 'Waiting'">
+            <button class="btn btn-decline btn-sm" (click)="declineRequest(request.requestId)" [disabled]="request.status === 'Rejected' || request.status === 'Pending' || request.status === 'Returned' ">
               {{request.status==='Rejected' ? '✕ Declined' : '✕ Decline'}}
 
             </button>
