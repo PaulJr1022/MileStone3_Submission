@@ -1,0 +1,83 @@
+<div class="backPhoto">
+  <div class="container py-5">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-lg-10 col-md-12 shadow-lg rounded">
+        <div class="row">
+          <!-- Image Section -->
+          <div class="col-lg-6 d-none d-lg-block">
+            <img
+              src="cropBike450.JPG"
+              alt="Bike Image"
+              class="img-fluid rounded-start"
+              style="height: 100%; object-fit: cover;"
+            />
+          </div>
+          
+          <!-- Form Section -->
+          <div class="col-lg-6 col-md-12 px-5 py-4">
+            <h2 class="text-center mb-4">Sign In</h2>
+            <form>
+              <!-- Email Field -->
+              <div class="form-group mb-3">
+                <label for="Gmail" class="form-label">Email Address</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="Gmail"
+                  placeholder="Enter your email"
+                  [(ngModel)]="loginObj.Email"
+                  name="Email"
+                />
+              </div>
+  
+              <!-- Password Field -->
+              <div class="form-group mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Enter your password"
+                  [(ngModel)]="loginObj.Password"
+                  name="Password"
+                />
+              </div>
+  
+              <!-- Remember Me and Forgot Password -->
+              <div class="form-group form-check d-flex justify-content-between align-items-center mb-3">
+                <div>
+                  <input type="checkbox" class="form-check-input" id="rememberMe" />
+                  <label class="form-check-label" for="rememberMe">Remember Me</label>
+                </div>
+                <a href="#" class="text-decoration-none">Forgot Password?</a>
+              </div>
+  
+              <!-- Sign In Button -->
+              <div class="d-grid">
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-block"
+                  (click)="onLogin()"
+                >
+                  Sign In
+                </button>
+              </div>
+            </form>
+  
+            <!-- Registration Link -->
+            <div class="text-center mt-4">
+              <span>Not a member? <a [routerLink]="['/register']" class="text-primary">Register Now</a></span>
+            </div>
+  
+            <!-- Social Media Icons -->
+            <div class="text-center mt-4">
+              <a href="#" class="text-decoration-none me-3"><i class="bi bi-facebook fs-4"></i></a>
+              <a href="#" class="text-decoration-none"><i class="bi bi-twitter fs-4"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

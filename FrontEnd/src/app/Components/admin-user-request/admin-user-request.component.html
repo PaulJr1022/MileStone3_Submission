@@ -1,0 +1,100 @@
+<section class=" back outSet">
+  <div class=" table-custom ">
+    <div class="booking-header my-3">
+      <h5>User Account Craetion Requests</h5>
+      <button class="btn btn-outline-secondary" (click)="printTableAsPDF()"><i class="bi bi-printer-fill"></i> Print</button>
+    </div>
+
+    <table class="table table-hover table-bordered shadow-lg rounded" style="width: 95%; margin-bottom: 20px;">
+      <thead>
+        <tr>
+          <th>User Id </th>
+          <th>User Name</th>
+          <th>Licnece Number</th>
+          <th>Licence Image</th>
+          <th>Captured Image</th>
+          <th>Accept / Decline</th>
+          <th>Status</th>     
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{user.userId}}</td>
+          <td>{{user.firstName }} {{user.lastName}}</td>
+          <td>{{user.licenseNumber}}</td>
+          <td>
+            <div class="d-flex align-items-center image-container">
+              <img [src]="'https://localhost:7000'+user.licenseImage" alt="Licence Image" class=" me-4 zoom-image"
+                width="100" height="80">
+
+            </div>
+
+          </td>
+          <td>
+            <div class="d-flex align-items-center image-container">
+              <img [src]="'https://localhost:7000'+user.cameraCapture" alt="Camera Captured Image"
+                class=" me-4 zoom-image" width="60" height="40"> 
+                
+              </div> 
+            
+
+          </td>
+          <td>
+        
+              <button class="btn btn-accept btn-sm  mb-3" [disabled]="user.status === 'Accepted' || user.status === 'Rejected'" (click)="accept(user)">  {{ user.status === 'Accepted' ? 'Accepted' : 'Accept' }}</button> <br>
+              <button class="btn btn-danger btn-sm"  [disabled]="user.status === 'Accepted' || user.status === 'Rejected'"   (click)="decline(user)"> {{ user.status === 'Rejected' ? 'Rejected' : 'Decline' }}</button>
+          
+           
+          </td>
+          <td [ngStyle]="{
+            'color': user.status === 'Accepted' ? 'Blue' : 'Red'}" style="font-family: 'Times New Roman', Times, serif; font-weight: bold;">
+            {{user.status}}
+          </td>
+        </tr>
+        <!-- <tr>
+                <td>1</td>
+                <td>User 1</td>
+                <td>B457677</td>
+                <td class="">
+                  <div class="d-flex align-items-center image-container">
+                      <img src="BMW__R_1250_GS_.png" alt="Licence Image" class=" me-4 zoom-image" width="100" height="80">
+                
+                    </div>
+                </td>
+                <td>
+                  <div class="d-flex align-items-center image-container">
+                      <img src="BMW__R_1250_GS_.png" alt="Capyured Image" class=" me-4 zoom-image" width="60" height="40">
+                
+                    </div>
+                </td>
+                <td>
+                  <button class="btn btn-accept btn-sm  mb-3"> Accept</button> <br>
+                  <button class="btn btn-danger btn-sm ">Decline</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>User 1</td>
+                <td>B457677</td>
+                <td class="">
+                  <div class="d-flex align-items-center image-container">
+                      <img src="BMW__R_1250_GS_.png" alt="Licence Image" class=" me-4 zoom-image" width="100" height="80">
+                
+                    </div>
+                </td>
+                <td>
+                  <div class="d-flex align-items-center image-container">
+                      <img src="BMW__R_1250_GS_.png" alt="Capyured Image" class=" me-4 zoom-image" width="60" height="40">
+                
+                    </div>
+                </td>
+                <td>
+                  <button class="btn btn-accept btn-sm  mb-3"> Accept</button> <br>
+                  <button class="btn btn-danger btn-sm ">Decline</button>
+                </td>
+              </tr> -->
+
+      </tbody>
+    </table>
+  </div>
+</section>

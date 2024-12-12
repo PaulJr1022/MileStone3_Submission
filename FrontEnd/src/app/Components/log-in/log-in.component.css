@@ -1,0 +1,80 @@
+.login-container {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7f9fc;
+  }
+
+  .login-card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 900px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .login-image {
+    background: url('https://via.placeholder.com/450') no-repeat center center;
+    background-size: cover;
+    width: 50%;
+  }
+
+  .login-form {
+    padding: 40px;
+    width: 50%;
+  }
+
+  .login-form h2 {
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+
+  .form-control {
+    border-radius: 30px;
+  }
+
+  .btn-primary {
+    /* background-color: #3b11d1; */
+    border: none;
+    border-radius: 30px;
+    padding: 10px 0;
+    width: 100%;
+    font-weight: 600;
+  }
+
+  .social-icons a {
+    color: #ccc;
+    font-size: 20px;
+    margin: 0 8px;
+    transition: color 0.3s ease;
+  }
+
+  .social-icons a:hover {
+    color: #333;
+  }
+
+  @media (max-width: 768px) {
+    .login-card {
+      flex-direction: column;
+    }
+
+    .login-image {
+      width: 100%;
+      height: 200px;
+    }
+
+    .login-form {
+      width: 100%;
+    }
+  }
+
+  .backPhoto{
+    /* background-color:l rgba(47, 125, 226, 0.4) ; */
+    background-image: linear-gradient(rgba(57, 119, 235, 0.664), rgb(243, 243, 243));
+    height: 100vh;
+    background-size: cover;
+  }

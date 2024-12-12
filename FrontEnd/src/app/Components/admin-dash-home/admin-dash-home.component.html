@@ -1,0 +1,62 @@
+<div class="outSet">
+  <div class="container my-4" > <!-- Added id -->
+    <ul class="nav nav-tabs mb-4">
+      <li class="nav-item">
+        <a class="nav-link active" [routerLink]="['/admin/dashHome']">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/admin/addBike']">Bike List</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/admin/rentalRequest']">Bike Request</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/admin/updateBike']">Update Bike</a>
+      </li>
+    </ul>
+
+    <!-- Top Metrics -->
+    <div class="booking-header my-3">
+      <h5>General Report</h5>
+      <button class="btn btn-outline-secondary" (click)="printPdf()">
+        <i class="bi bi-printer-fill"></i> Print
+      </button>
+    </div>
+
+    <div class="" id="contentToDownload">
+
+      <!-- Dashboard Metrics -->
+      <div class="dashboard-grid">
+        <div class="metric-card">
+          <h6>Total Users</h6>
+          <div class="value">{{ totalUsers }}</div>
+        </div>
+        <div class="metric-card">
+          <h6>Total Bikes</h6>
+          <div class="value">{{ totalBikes }} <span class="badge bg-success">Bikes</span></div>
+        </div>
+        <div class="metric-card">
+          <h6>Booked Bikes</h6>
+          <div class="value">{{ BookedBikes }} <span class="badge bg-info">Booked</span></div>
+        </div>
+        <div class="metric-card">
+          <h6>Revenue</h6>
+          <div class="value">{{ revenue | currency }}</div>
+        </div>
+      </div>
+  
+      <!-- Charts -->
+      <div class="chart-section mt-4">
+        <div class="chart-card">
+          <div class="chart-title">Bar Chart</div>
+          <canvas id="BarChart"></canvas>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title">Pie Chart</div>
+          <canvas id="PieChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,263 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand rentalLogo" href="#"> <img src="me2logo-modified.png" class="mx-1" alt="" width="40"> Me2 Bike
+      Rental</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse  " id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link active text-hover " aria-current="page" [routerLink]="['/user/rentBike']">Rent Bike</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active text-hover" aria-current="page" [routerLink]="['/user/UpdateUser']">Update Your
+            Details</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active text-hover" aria-current="page" [routerLink]="['/user/userRental']">Your
+            Rental Requests</a>
+        </li>
+
+
+      </ul>
+      <p class="userText ">WELCOME : <span >  {{fname | uppercase}} {{lname | uppercase}}</span></p>
+      <form class="d-flex">
+        <a (click)="logout()" class="btn btn-light me-4 px-5 login-hover">Log out</a>
+        <!-- <a  [routerLink]="['/register']" class="btn btn-primary px-5 signup-hover">Register Now</a> -->
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="container mt-5">
+  <div class="row">
+    <!-- Card 1: Total Requests -->
+    <div class="col-md-3">
+      <div class="card text-white bg-primary mb-3">
+        <div class="card-header">Total Requests</div>
+        <div class="card-body">
+          <h5 class="card-title">{{ reports[0]?.value || 0 }}</h5>
+          <p class="card-text">Total Requests from you</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2: Total Returned -->
+    <div class="col-md-3">
+      <div class="card text-white bg-success mb-3">
+        <div class="card-header">Returned Bike</div>
+        <div class="card-body">
+          <h5 class="card-title">{{ reports[1]?.value || 0 }}</h5>
+          <p class="card-text">Total Returned Bike</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3: Total Pending -->
+    <div class="col-md-3">
+      <div class="card text-white bg-warning mb-3">
+        <div class="card-header">Pending</div>
+        <div class="card-body">
+          <h5 class="card-title">{{ reports[2]?.value || 0 }}</h5>
+          <p class="card-text">Total Bikes Pending</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4: Total Late Returns -->
+    <div class="col-md-3">
+      <div class="card text-white bg-secondary mb-3">
+        <div class="card-header">Late Return</div>
+        <div class="card-body">
+          <h5 class="card-title">{{ reports[3]?.value || 0 }}</h5>
+          <p class="card-text">Total Bikes Late Returned</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="">
+  <router-outlet> </router-outlet>
+
+</div>
+
+
+
+<div class="container mt-5">
+  <h3 class="text-left text-primary">Top Rental Destinations</h3>
+  <div class="row row-cols-1 row-cols-md-6 g-3 mt-4">
+
+    <div class="col">
+      <div class="cards text-center border-0 shadow position-relative">
+        <img src="Nallur Kovil jaffna.jpg" class="card-img-top" alt="Auckland">
+        <div class="card-overlay">
+          <h5 class="card-title text-white">Jaffna</h5>
+          <p class="text-black-50">Nallur</p>
+          <div class="badge bg-primary text-white mb-1">12 Hours</div>
+          <div class="badge bg-success text-white">617 KM</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="cards text-center border-0 shadow position-relative">
+        <img src="Anuradhapura 2.jpg" class="card-img-top" alt="Anu">
+        <div class="card-overlay">
+          <h5 class="card-title text-white">Anuradhapura</h5>
+          <p class="text-black-50 text-white">Iconic</p>
+          <div class="badge bg-primary text-white mb-1">5 Hours</div>
+          <div class="badge bg-success text-white">158 KM</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="cards text-center border-0 shadow position-relative">
+        <img src="R1-batticalo.jpg" class="card-img-top" alt="Batti">
+        <div class="card-overlay">
+          <h5 class="card-title text-white">Batticalo</h5>
+          <p class="text-white-50">Kalladi Beach</p>
+          <div class="badge bg-primary text-white mb-1">9 Hours</div>
+          <div class="badge bg-success text-white">317 KM</div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col">
+      <div class="cards text-center border-0 shadow position-relative">
+        <img src="Galle.jpg" class="card-img-top" alt="Galle">
+        <div class="card-overlay">
+          <h5 class="card-title text-white">Galle</h5>
+          <p class="text-white-50">Port</p>
+          <div class="badge bg-primary text-white mb-1">10 Hours</div>
+          <div class="badge bg-success text-white">10 Hours</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="cards text-center border-0 shadow position-relative">
+        <img src="colombo.jpeg" class="card-img-top" alt="Colombo">
+        <div class="card-overlay">
+          <h5 class="card-title text-white">Colombo</h5>
+          <p class="text-white-50">Lotus Tower</p>
+          <div class="badge bg-primary text-white mb-1">400 KM</div>
+          <div class="badge bg-success text-white">9 Hours</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="cards text-center border-0 shadow position-relative">
+        <img src="OIP-2 Kandy.jpg" class="card-img-top" alt="Kandy">
+        <div class="card-overlay">
+          <h5 class="card-title text-white">Kandy</h5>
+          <p class="text-white-50">Temple</p>
+          <div class="badge bg-primary text-white mb-1">400 KM</div>
+          <div class="badge bg-success text-white">9 Hours</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="container my-5">
+  <h3 class="text-center">Why Choose Us</h3>
+  <p class="text-center text-muted">Here is why you need to choose Me 2 Bike Rental  as your dream rental platform.</p>
+  <div class="row row-cols-1 row-cols-md-3 g-4"> 
+
+    <div class="col">
+      <div class="cardy text-center p-4">
+        <div class="icon-box">
+          <i class="bi bi-person-check"></i>
+        </div>
+        <h5 class="cardy-title">Secure and Hassle-Free Booking</h5>
+        <p class="cardy-text">We prioritize your safety and convenience. With our user-friendly website, you can easily book your dream bike securely and without any hassle. Your personal information is always protected.</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="cardy text-center p-4">
+        <div class="icon-box teal">
+          <i class="bi bi-person"></i> 
+        </div>
+        <h5 class="cardy-title">Affordable, Transparent Pricing</h5>
+        <p class="cardy-text">At Me 2 Bike, we believe in transparency and fairness. We offer only one standard price for our bike rentals, ensuring there are no hidden fees or pricing scams. You can trust that the price you see is the price you pay.</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="cardy text-center p-4">
+        <div class="icon-box orange">
+          <i class="bi bi-bicycle"></i> 
+        </div>
+        <h5 class="cardy-title">Diverse Fleet for Every Adventure</h5>
+        <p class="cardy-text">Whether you're exploring the city, or cruising along the coast, we have the perfect bike for your adventure. Our well-maintained fleet offers a wide range of options to suit your riding style and preferences.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer Section -->
+
+<div class="footer">
+  <div class="container">
+    <div class="row text-center text-md-start">
+
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold footerText"><img src="me2logo-modified.png" class="mx-1" alt="" width="40">Me2 Bike Rental</h5>
+        <p>See the world, on two wheels.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4 ">
+        <h5 class="fw-bold footerText">About us</h5>
+        <ul class="list-unstyled justify-content-center">
+          <li><a href="#">Our story</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Worldwide Locations</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold footerText">Legal</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Disclaimer</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Acceptable Use Policy</a></li>
+          <li><a href="#">Terms and Conditions</a></li>
+          <li><a href="#">Consent Preferences</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

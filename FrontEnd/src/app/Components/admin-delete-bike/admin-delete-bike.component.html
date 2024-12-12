@@ -1,0 +1,61 @@
+
+<div class="outSet">
+    <ul class="nav nav-tabs mb-4" >
+        <li class="nav-item">
+            <a class="nav-link " [routerLink]="['/admin/dashHome']">Home</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link " [routerLink]="['/admin/addBike']">Bike List</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " [routerLink]="['/admin/rentalRequest']">Bike Request</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " [routerLink]="['/admin/updateBike']">Update Bike</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" [routerLink]="['/admin/deleteBike']">Delete Bike</a>
+        </li>
+  
+      </ul>
+
+    <div class=" table-custom ">
+        <div class="booking-header my-3">
+          <h5>Update Bikes</h5>
+          <button class="btn btn-outline-secondary"><i class="bi bi-printer-fill"></i>  Print</button>
+        </div>
+      
+        <table class="table table-hover table-bordered" style="width: 95%; margin-bottom: 20px;">
+          <thead>
+            <tr>
+              <th>Bike</th>
+              <th>Start Date</th>
+              <th>Duration</th>
+              <th>Total Price</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="d-flex align-items-center">
+                  <img src="BMW__R_1250_GS_.png" alt="Bike Image" class=" me-4" width="40" height="40">
+                  <div>
+                    <strong>Urban 125</strong><br>
+                    <small>Aeon</small>
+                  </div>
+                </div>
+              </td>
+              <td>Feb. 15, 2021</td>
+              <td>2 days</td>
+              <td>37,40 €</td>
+              <td>
+                <button class="btn btn-danger btn-sm me-3">Click to Delete</button>
+
+              </td>
+            </tr>
+         
+          </tbody>
+        </table>
+      </div>
+</div>

@@ -1,0 +1,528 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand rentalLogo" href="#"><img src="me2logo-modified.png" class="mx-1 " alt="" width="40"> Me2 Bike Rental</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse  " id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-end">
+        <li class="nav-item">
+          <!-- <a class="nav-link active text-hover " aria-current="page" href="#">Home</a> -->
+        </li>
+        <li class="nav-item">
+          <!-- <a class="nav-link text-hover " href="#">Bikes</a> -->
+        </li>
+
+      </ul>
+      <form class="d-flex">
+        <a [routerLink]="['/login']" class="btn btn-light me-4 px-5 login-hover ">Log in <i class="bi bi-person-circle"></i></a>
+        <a [routerLink]="['/register']" class="btn btn-primary px-5 signup-hover">Register Now  <i class="bi bi-person-bounding-box"></i></a>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+<header class="bg-light text-center py-5 myphoto">
+  <div class="container">
+      <h1 class="display-4 fw-bold headText">Welcome to our Me2 Bike Rental!</h1>
+      <p class="intro">"Ready to explore your world on two wheels? At Me2 Bike Rental, we provide top-quality bikes and gear for your next adventure. Whether you're commuting, cruising through scenic trails, or taking a fun weekend ride, we’ve got the perfect bike for you. Ride easy, ride free—let’s make your journey unforgettable! 🚴‍♂️🌟"</p>
+      <div class="d-flex justify-content-center align-items-center my-4">
+          <!-- <input type="text" class="form-control me-2" placeholder="Still You did not create account..?" style="max-width: 300px;" disabled> -->
+           <h3 class="secondHead me-3">Still You did not create account..?</h3>
+          <button class="btn btn-primary secondRegister" [routerLink]="['/register']">Click Here...</button>
+      </div>
+      <div class="d-flex justify-content-center gap-4 text-secondary">
+      </div>
+  </div>
+</header>
+<!-- 
+<div class="content">
+  <h1 class="title">Me2 Bike Rental
+    <div class="aurora">
+      <div class="aurora_item"></div>
+      <div class="aurora_item"></div>
+      <div class="aurora_item"></div>
+      <div class="aurora_item"></div>
+    </div>
+  </h1>
+</div> -->
+
+<div class="container text-center my-5">
+  <!-- <h1 class="title text-primary">Me2 Bike Rental</h1> -->
+  <div class="aurora d-flex justify-content-center">
+    <div class="aurora_item bg-primary rounded-circle m-2" style="width: 50px; height: 50px;"></div>
+    <div class="aurora_item bg-primary rounded-circle m-2" style="width: 50px; height: 50px;"></div>
+    <div class="aurora_item bg-primary rounded-circle m-2" style="width: 50px; height: 50px;"></div>
+    <div class="aurora_item bg-primary rounded-circle m-2" style="width: 50px; height: 50px;"></div>
+    <div class="aurora_item bg-primary rounded-circle m-2" style="width: 50px; height: 50px;"></div>
+    <div class="aurora_item bg-primary rounded-circle m-2" style="width: 50px; height: 50px;"></div>
+  </div>
+</div>
+
+
+
+<div class="container styleImage">
+  <span class="imgSt" style="--image-index: 0">
+    <img class="styleImg" src="stylePhoto (1).jpg" alt="">
+  </span>
+  <span class="imgSt" style="--image-index: 1">
+    <img class="styleImg" src="stylePhoto (2).jpg" alt="">
+  </span>
+  <span class="imgSt" style="--image-index: 2">
+    <img class="styleImg" src="stylePhoto (3).jpg" alt="">
+  </span>
+  <span class="imgSt" style="--image-index: 3">
+    <img class="styleImg" src="stylePhoto (4).jpg" alt="">
+  </span>
+  <span class="imgSt" style="--image-index: 4">
+    <img class="styleImg" src="stylePhoto (5).jpg" alt="">
+  </span>
+  <span class="imgSt" style="--image-index: 5">
+    <img class="styleImg" src="stylePhoto (6).jpg" alt="">
+  </span>
+  <span class="imgSt" style="--image-index: 6">
+    <img class="styleImg" src="stylePhoto (7).jpg" alt="">
+  </span>
+</div>
+
+<div class="container text-center my-5">
+  <!-- <h1 class="title text-primary">Me2 Bike Rental</h1> -->
+  <div class="aurora d-flex justify-content-center">
+    <div class="aurora_item bg-primary rounded-circle m-2" style="width: 50px; height: 50px;"></div>
+    <div class="aurora_item bg-primary rounded-circle m-2" style="width: 50px; height: 50px;"></div>
+    <div class="aurora_item bg-primary rounded-circle m-2" style="width: 50px; height: 50px;"></div>
+    <div class="aurora_item bg-primary rounded-circle m-2" style="width: 50px; height: 50px;"></div>
+    <div class="aurora_item bg-primary rounded-circle m-2" style="width: 50px; height: 50px;"></div>
+    <div class="aurora_item bg-primary rounded-circle m-2" style="width: 50px; height: 50px;"></div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="">
+  <!-- <div id="carouselExampleSlidesOnly" class="carousel slide " data-bs-ride="carousel " >
+    <div class="carousel-inner" style="height:80vh;" >
+      <div class="carousel-item active">
+        <img src="bikeCoverslide1 (1).jpg" class="d-block w-100 " alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="bikeCoverslide2 (1).jpg" class="d-block w-100 " alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="bikeCoverslide4 (1).jpg" class="d-block w-100 " alt="...">
+      </div>
+    </div>
+  </div> -->
+
+  <!-- Filter Bike  -->
+  <div class="container my-4 ">
+    <div class="search-bar">
+      <!-- Date Range Picker (placeholder) -->
+      <input type="text" class="date-range" placeholder="Search By Brand"   [(ngModel)]="searchBrand">
+  
+      <!-- City Input -->
+      <input type="number" class="city-input" placeholder="Search By Rent"  [(ngModel)]="searchRent">
+  
+      <!-- Dropdown (placeholder for "All") -->
+      <!-- <div class="dropdown">
+        <select aria-label="Select Category">
+          <option selected>All</option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+        </select>
+      </div> -->
+  <!-- 
+      <ul class="nav nav-tabs mb-3">
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="activeTab ==='brand'" (click)="activeTab='brand'">Search By Brand</a>
+  
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="activeTab ==='rent'" (click)="activeTab='rent'">Search By Rent</a>
+  
+        </li>
+  
+      </ul> -->
+  
+      <!-- Search Button -->
+      <button class="btn btn-search">Search</button>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="">
+  <div class="bikeList my-5 ">
+    <div class=" bikeDesc container mt-4 mb-5">
+      <h5>Last Minute Offer</h5>
+      <h3>Motorcycle & Scooters for rent</h3>
+    </div>
+
+    <div class="container ">
+      <div class="row justify-content-center">
+
+
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4" *ngFor="let bike of bikes | search : searchBrand : searchRent ">
+          <div class="custom-card card position-relative mb-4" >
+            <div class="" >
+                <span class="badge badge-custom">Unlimited Mileage</span>
+                <div class="location-text mt-4">
+                  <img
+                    src="https://www.publicdomainpictures.net/pictures/270000/velka/flag-of-sri-lanka-sri-lanka-flag.jpg"
+                    alt="Country Flag" class="me-1" width="20">
+                  <span>SriLanka</span>
+                  <span>•</span>
+                  <span>Bikes</span>
+                </div>
+
+                <div class="stars mt-1">
+                  &#9733; &#9733; &#9733; &#9733; &#9733;
+                </div>
+                <h5 class="card-title">Brand : {{ bike.brandName }}</h5>
+                <h6 class="card-title">Model : {{ bike.modelName }}</h6>
+                <div class=""*ngFor="let unit of bike.bikeUnits">
+                  <h6 class="card-title">Year : {{ unit.year }}</h6>
+                  <p>Registration Number: {{ unit.registrationNumber }} </p>
+                  <p class="mb-1 price-text">Price <span class="price">{{ unit.rentPerDay | currency }}</span>/day</p>
+                  
+                  <div class=""  *ngIf="unit.bikeImages.length > 0">
+                    <img *ngFor="let imgs of unit.bikeImages" [src]="'https://localhost:7000/' + imgs.image" alt="Motorcycle Image" class="card-image" width="10" >
+                  </div>
+                  <!-- <button class="btn view-btn mt-2" [routerLink]="['/user/viewBike']">View</button> -->
+                </div>
+            </div>
+
+       
+              
+       
+
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- <div *ngFor="let bike of bikes" class="bike-card">
+  <h2>{{ bike.brandName }} - {{ bike.modelName }}</h2>
+  <div *ngFor="let unit of bike.bikeUnits" class="bike-unit">
+    <p>Registration Number: {{ unit.registrationNumber }}</p>
+    <p>Year: {{ unit.year }}</p>
+    <p>Rent Per Day: {{ unit.rentPerDay | currency }}</p>
+    <div *ngIf="unit.bikeImages.length > 0" class="bike-images">
+      <img *ngFor="let imgs of unit.bikeImages" [src]="'https://localhost:7000/' + imgs.image" />
+
+    </div>
+  </div>
+</div> -->
+
+
+
+<!-- Extras -->
+
+<div class="container mt-5">
+  <div class="row justify-content-center featureText">
+    <h5>One-of-a-kind motorcycle rentals</h5>
+    <h4>Search, Compare, Reserve.</h4>
+
+    <div class=" col-lg-4 col-md-4 col-sm-12 mb-4">
+      <div class=" position-relative" style="width: 18rem;">
+        <img src="ExtraLogo1.JPG" class="card-img-top" alt="..." width="30px">
+        <div class="card-body">
+          <h4 class="card-title text-center">Find the right motorbike</h4>
+          <p class="card-text text-center">Enter a location and date to browse and compare thousands of motorbikes
+            available by over 600 local providers.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
+
+      <div class=" position-relative" style="width: 18rem;">
+        <img src="ExtraLogo3.JPG" class="card-img-top" alt="..." width="30px">
+
+        <div class="card-body">
+          <h4 class="card-title text-center">Enjoy the ride</h4>
+          <p class="card-text text-center">Have the motorbike delivered or pick it up from the local rental office. Show
+            your voucher, grab the keys and hit the road.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
+
+      <div class=" position-relative" style="width: 18rem;">
+        <img src="ExtraLogo2.JPG" class="card-img-top" alt="..." width="30px">
+
+        <div class="card-body">
+          <h4 class="card-title text-center">Book at the best price</h4>
+          <p class="card-text text-center">Our prices are guaranteed equal or lower than you can book on arrival! Cancel
+            for free up to 24 hours before.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="myBack">
+  <section class="py-5">
+    <div class="container text-center">
+      <h5 class="text-primary">TESTIMONIALS</h5>
+      <h2 class="mb-5">Hear it from them</h2>
+
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <!-- Testimonial Items -->
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-md-4 mb-4">
+                <div class="testimonial-card">
+                  <div class="star-rating mb-2">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>"Me2 Bike Rental in Sri Lanka made my trip unforgettable! The bikes were well-maintained, the booking process was seamless, and the customer service was outstanding. Highly recommended for hassle-free bike rentals!"</p>
+                  <p class="fw-bold mb-0">Amalista</p>
+                  <p class="text-muted">18 September 2023</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="testimonial-card">
+                  <div class="star-rating mb-2">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>"Fantastic service and reliable bikes! Me2 Bike Rental ensured I had a smooth ride while exploring Sri Lanka. Affordable rates and friendly staff make them the best choice for bike rentals."
+                  </p>
+                  <p class="fw-bold mb-0">Dilaxshan</p>
+                  <p class="text-muted">26 September 2024</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="testimonial-card">
+                  <div class="star-rating mb-2">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>The Me2 Team is very friendly. They helped me search and check for available rentals. The
+                    rental shop provided a bike in good condition.</p>
+                  <p class="fw-bold mb-0">Gopi</p>
+                  <p class="text-muted">9 December 2024</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="testimonial-card">
+                  <div class="star-rating mb-2">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>"I had an amazing experience with Me2 Bike Rental! The bikes were in excellent condition, and the team was very professional and helpful. A must-try for anyone looking to explore Sri Lanka on two wheels."</p>
+                  <p class="fw-bold mb-0">Paul</p>
+                  <p class="text-muted">18 September 2024</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="testimonial-card">
+                  <div class="star-rating mb-2">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>"Me2 Bike Rental truly exceeded my expectations. From easy booking to flexible options, they made my journey across Sri Lanka enjoyable and stress-free. Definitely worth it!"</p>
+                  <p class="fw-bold mb-0">Rasmin</p>
+                  <p class="text-muted">16 July 2024</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="testimonial-card">
+                  <div class="star-rating mb-2">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>Nice job Me2! Very good and quick communication. The rental place in Istanbul is friendly and
+                    helpful. The bikes are in good condition. Will come again!</p>
+                  <p class="fw-bold mb-0">Dharshan</p>
+                  <p class="text-muted">22 October 2024</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-4 mb-4">
+                <div class="testimonial-card">
+                  <div class="star-rating mb-2">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>"Me2 Bike Rental is the perfect choice for adventurers in Sri Lanka. Their bikes are top-notch, and the staff goes above and beyond to ensure customer satisfaction. I’ll definitely rent from them again!"</p>
+                  <p class="fw-bold mb-0">Niluxshan</p>
+                  <p class="text-muted">28 January 2024</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="testimonial-card">
+                  <div class="star-rating mb-2">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>"Exploring Sri Lanka was a breeze thanks to Me2 Bike Rental. The bikes were comfortable and fuel-efficient, and the team was always available to assist. A truly exceptional rental service!"</p>
+                  <p class="fw-bold mb-0">Roxshan</p>
+                  <p class="text-muted">27 August 2024</p>
+                </div>
+              </div>
+              <!-- Add more testimonials as needed -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- credit payment details -->
+
+<section class="py-4">
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col-6 col-md-4 col-lg-2 feature-item">
+        <i class="bi bi-check-circle-fill"></i> No credit-card fees
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 feature-item">
+        <i class="bi bi-check-circle-fill"></i> Price match guarantee
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 feature-item">
+        <i class="bi bi-check-circle-fill"></i> Online booking management
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 feature-item">
+        <i class="bi bi-check-circle-fill"></i> Free cancellations & amendments
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 feature-item">
+        <i class="bi bi-check-circle-fill"></i> 24/7 Customer Service
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="row my-4">
+  <div class="col-5">
+    <section class="hero-section container d-flex flex-column flex-lg-row align-items-center">
+      <!-- Text Content -->
+      <!-- <div class="hero-text text-center text-lg-start">
+              <h5 class="text-uppercase text-muted">Rental</h5>
+              <h1 class="display-4">MOTORBIKE</h1>
+              <p class="lead text-muted">Choose from a range of modern and comfortable motorbikes. Easy rental, reliable service.</p>
+              <a href="#" class="btn btn-dark btn-lg">Get Started</a>
+            </div> -->
+      <!-- Hero Image -->
+      <div class="hero-image mt-4 mt-lg-0 ms-lg-5">
+        <img src="https://webstockreview.net/images/clipart-sports-motorbike-3.png" alt="Person riding a motorbike"
+          class="img-fluid">
+      </div>
+    </section>
+  </div>
+  <div class="col-1"></div>
+  <div class="col-6">
+    <div class="ratio ratio-16x9 me-2">
+      <!-- <iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" allowfullscreen></iframe> -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3933.1753323716434!2d80.00656377417621!3d9.66605567869361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afe570010da0795%3A0x642cc900b494e9a3!2sUnicom%20TIC!5e0!3m2!1sen!2slk!4v1731518864728!5m2!1sen!2slk"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Footer Section -->
+
+<div class="footer">
+  <div class="container">
+    <div class="row text-center text-md-start">
+
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold footerText">Me2 Bike Rental</h5>
+        <p>See the world, on two wheels.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4 ">
+        <h5 class="fw-bold footerText">About us</h5>
+        <ul class="list-unstyled justify-content-center">
+          <li><a href="#">Our story</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Worldwide Locations</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold footerText">Legal</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Disclaimer</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Acceptable Use Policy</a></li>
+          <li><a href="#">Terms and Conditions</a></li>
+          <li><a href="#">Consent Preferences</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

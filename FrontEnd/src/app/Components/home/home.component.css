@@ -1,0 +1,760 @@
+/* .login-hover {
+    border: 1px solid blue;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(50, 29, 247);
+}
+
+.signup-hover {
+    border: 1px solid blue;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+} */
+.login-hover {
+ 
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: blue;
+    /* border-radius: 50px; */
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(25, 22, 115, 0.4);
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    border-color: #271de7;
+}
+
+.signup-hover {
+    background: linear-gradient(35deg, #271de7, #271de7);
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    /* border-radius: 50px; */
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(25, 22, 115, 0.4);
+    font-family: 'Roboto', sans-serif;
+}
+
+.signup-hover:hover {
+    border: 1px solid blue;
+    background-color: rgb(50, 29, 247);
+
+}
+
+.login-hover:hover {
+    background-color: rgb(50, 29, 247);
+    color: white;
+}
+
+.text-hover:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.footer {
+    background-color: #e9f1f0;
+    /* Light gray background */
+    padding: 40px 0;
+    color: #374151;
+    /* Dark gray text */
+    bottom: 0;
+    width: 100%;
+    /* position: fixed; */
+}
+
+.footer a {
+    color: #374151;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #0d6efd;
+    /* Bootstrap's primary color on hover */
+    text-decoration: underline;
+}
+
+.footer .social-icons a {
+    font-size: 20px;
+    margin-right: 15px;
+    color: #374151;
+    transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    color: #0d6efd;
+}
+
+/* LandingPageCss */
+
+.footerText{
+    font-family:"Roboto", serif; 
+    font-weight: 500;
+    color: #1041e0;
+    
+}
+
+.slideText {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: #374151;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    overflow: hidden;
+}
+
+.search-bar input,
+.search-bar select {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding: 10px;
+}
+
+.search-bar input::placeholder {
+    color: #888;
+}
+
+.search-bar .date-range,
+.search-bar .city-input {
+    flex: 1;
+    min-width: 100px;
+}
+
+.search-bar .dropdown {
+    padding: 0 10px;
+    border-left: 1px solid #ccc;
+}
+
+.search-bar .btn-search {
+    border-radius: 25px;
+    background-color: #4A90E2;
+    color: white;
+    padding: 5px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.search-bar .btn-search:hover {
+    background-color: #357ABD;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .search-bar {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .search-bar .dropdown {
+        border-left: none;
+        border-top: 1px solid #ccc;
+    }
+
+    .search-bar .btn-search {
+        width: 100%;
+    }
+}
+
+.custom-card {
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.custom-card:hover {
+    transform: scale(1.05);
+}
+
+.badge-custom {
+    background-color: #78dcca;
+    color: #ffffff;
+    font-size: 0.75rem;
+    padding: 5px 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.location-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.stars {
+    color: #FFD700;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333333;
+    margin-top: 10px;
+}
+
+.price-text {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333333;
+}
+
+.price {
+    color: #007bff;
+    font-size: 1.5rem;
+}
+
+.view-btn {
+    background-color: #4A90E2;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 5px 15px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.bikeList {
+    background-color: rgba(161, 157, 157, 0.072);
+    /* margin-top: 4%; */
+}
+
+.bikeDesc {
+    text-transform: uppercase;
+}
+
+.bikeDesc h5 {
+    color: #007bff;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.bikeDesc h3 {
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.featureText h5 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #007bff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.featureText h4 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    /* color: #007bff; */
+    text-align: center;
+    font-weight: bold;
+}
+
+.searchBar {
+    position: relative;
+    top: 5%;
+    left: 5%;
+    z-index: 1;
+}
+
+
+.login-hover {
+    border: 1px solid blue;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(50, 29, 247);
+}
+
+.signup-hover {
+    border: 1px solid blue;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+}
+
+/* .signup-hover:hover {
+    border: 1px solid blue;
+    background-color: rgb(50, 29, 247);
+
+} */
+
+.login-hover:hover {
+    background-color: rgb(50, 29, 247);
+    color: white;
+}
+
+.text-hover:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.footer {
+    background-color: #e9f1f0;
+    /* Light gray background */
+    padding: 40px 0;
+    color: #374151;
+    /* Dark gray text */
+    bottom: 0;
+    width: 100%;
+    /* position: fixed; */
+}
+
+.footer a {
+    color: #374151;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #0d6efd;
+    /* Bootstrap's primary color on hover */
+    text-decoration: underline;
+}
+
+.footer .social-icons a {
+    font-size: 20px;
+    margin-right: 15px;
+    color: #374151;
+    transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    color: #0d6efd;
+}
+
+/* LandingPageCss */
+
+.slideText {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: #374151;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    overflow: hidden;
+}
+
+.search-bar input,
+.search-bar select {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding: 10px;
+}
+
+.search-bar input::placeholder {
+    color: #888;
+}
+
+.search-bar .date-range,
+.search-bar .city-input {
+    flex: 1;
+    min-width: 100px;
+}
+
+.search-bar .dropdown {
+    padding: 0 10px;
+    border-left: 1px solid #ccc;
+}
+
+.search-bar .btn-search {
+    border-radius: 25px;
+    background-color: #4A90E2;
+    color: white;
+    padding: 5px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.search-bar .btn-search:hover {
+    background-color: #357ABD;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .search-bar {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .search-bar .dropdown {
+        border-left: none;
+        border-top: 1px solid #ccc;
+    }
+
+    .search-bar .btn-search {
+        width: 100%;
+    }
+}
+
+.custom-card {
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.custom-card:hover {
+    transform: scale(1.05);
+}
+
+.badge-custom {
+    background-color: #78dcca;
+    color: #ffffff;
+    font-size: 0.75rem;
+    padding: 5px 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.location-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.stars {
+    color: #FFD700;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333333;
+    margin-top: 10px;
+}
+
+.price-text {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333333;
+}
+
+.price {
+    color: #007bff;
+    font-size: 1.5rem;
+}
+
+.view-btn {
+    background-color: #4A90E2;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 5px 15px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.bikeList {
+    background-color: rgba(161, 157, 157, 0.072);
+    /* margin-top: 4%; */
+}
+
+.bikeDesc {
+    text-transform: uppercase;
+}
+
+.bikeDesc h5 {
+    color: #007bff;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.bikeDesc h3 {
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.featureText h5 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #007bff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.featureText h4 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    /* color: #007bff; */
+    text-align: center;
+    font-weight: bold;
+}
+
+.testimonial-card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.star-rating i {
+    color: #ffc107;
+}
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    font-weight: bold;
+}
+
+.hero-image img {
+    max-width: 100%;
+}
+
+.feature-item {
+    color: #28a745;
+    /* Green color similar to the image */
+    font-weight: bold;
+}
+
+.myBack {
+    background-color: rgba(220, 220, 220, 0.178);
+}
+
+
+
+/* BikeShowing */
+
+.bike-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.bike-unit {
+    margin-top: 8px;
+}
+
+.bike-images img {
+    max-width: 200px;
+    margin-right: 8px;
+}
+
+/* .myphoto {
+
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), url('../../../../public/landscape_cover.jpg');
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.headText {
+    color: white;
+  letter-spacing: 5px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bolder;
+  font-size: 70px;
+} */
+
+.myphoto {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), 
+                url('../../../../public/landscape_cover.jpg');
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    margin-top: 1%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.headText {
+    color: #fff;
+    letter-spacing: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 64px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+.intro {
+    color: #f1f1f1;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 800px;
+    text-align: center;
+    margin: 20px auto;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+.secondHead {
+    /* color: #35d36f; */
+    font-size: 22px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary {
+    background: linear-gradient(35deg, #271de7, #271de7);
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    /* border-radius: 50px; */
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(25, 22, 115, 0.4);
+    /* font-family: 'Roboto', sans-serif; */
+}
+.btn-primary:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 18, 158, 0.6);
+}
+
+.rentalLogo {
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #1041e0;
+    font-size: 25px;
+}
+.intro{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10%;
+    letter-spacing: 1px;
+}
+.secondHead{
+    color: rgb(255, 255, 255);
+    font-family:"Shrikhand", serif; 
+}
+
+.secondRegister{
+    font-family:"Shrikhand", serif; 
+}
+
+
+
+.styleImg {
+    width: 240px;
+    height: 400px;
+}
+
+.styleImage {
+    width: 1000px;
+    height: 400px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: gallery 10s linear infinite;
+    cursor: pointer;
+}
+
+.imgSt {
+    position: absolute;
+    transform: rotateY(calc(var(--image-index) * 45deg)) translateZ(300px);
+}
+
+@keyframes gallery {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+
+
+  .aurora {
+    position: relative;
+  }
+
+  .aurora_item {
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.5);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }

@@ -1,0 +1,51 @@
+<div class="outSet">
+    <div class=" mb-5">
+        <div class="mt-2 container">
+            <!-- Tabs -->
+            <ul class="nav nav-tabs mb-4">
+                <li class="nav-item">
+                    <a class="nav-link " [routerLink]="['/admin/reports']">Inventory </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" [routerLink]="['/admin/reportUsers']">User History</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link " [routerLink]="['/admin/reportUsers']">UserHistory</a>
+                </li>              -->
+            </ul>
+
+            <div class=" table-custom ">
+                <div class="booking-header my-3">
+                  <h5>Inventory and User Report</h5>
+                  <button class="btn btn-outline-secondary"><i class="bi bi-printer-fill"></i> Print</button>
+                </div>
+
+            <div class="container">
+                <h6>User History</h6>
+                <table class="table table-hover table-bordered" style="width: 95%; margin-bottom: 20px;">
+                  <thead>
+                    <tr>
+                      <th>User Name</th>
+                      <th>Total Requests</th>
+                      <th>Total Returned</th>
+                      <th>Total Pending</th>
+                      <th>Total Late Returns</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let user of userHistories">
+                      <td>{{ user.userName }}</td>
+                      <td>{{ user.totalRequests }}</td>
+                      <td>{{ user.totalReturned }}</td>
+                      <td>{{ user.totalPending }}</td>
+                      <td>{{ user.totalLateReturns }}</td>
+                    </tr>
+        
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+        </div>
+    </div>
+</div>

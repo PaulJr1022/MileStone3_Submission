@@ -1,0 +1,116 @@
+<div class="outSet">
+  <ul class="nav nav-tabs mb-4">
+    <li class="nav-item">
+      <a class="nav-link " [routerLink]="['/admin/dashHome']">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " [routerLink]="['/admin/addBike']">Bike List</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " [routerLink]="['/admin/rentalRequest']">Bike Request</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" [routerLink]="['/admin/updateBike']">Update Bike</a>
+    </li>
+    <!-- <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/admin/deleteBike']">Delete Bike</a>
+        </li> -->
+
+  </ul>
+
+  <div class=" table-custom ">
+    <div class="booking-header my-3">
+      <h5>Update Bikes</h5>
+      <button class="btn btn-outline-secondary"><i class="bi bi-printer-fill"></i> Print</button>
+    </div>
+
+
+    <div class="container">
+      <table class="table table-hover table-bordered" style="width: 95%; margin-bottom: 20px;">
+        <thead>
+          <tr>
+            <th>Bike ID</th>
+            <th>Registration No</th>
+            <th>Bike Image</th>
+            <th>Brand Name</th>
+            <th>Model Name</th>
+            <th>Year</th>
+            <th>Rent Per Day</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <ng-container *ngFor="let bike of bikes">
+            <tr *ngFor="let unit of bike.bikeUnits">
+              <td>{{ unit.bikeId }}</td>
+              <td>{{unit.registrationNumber}}</td>
+              <td>
+                <img *ngIf="unit.bikeImages.length > 0" [src]="'https://localhost:7000/' +unit.bikeImages[0].image"
+                  alt="Bike Image" width="100" />
+              </td>
+
+              <td>{{ bike.brandName }}</td>
+
+              <td>{{ bike.modelName }}</td>
+
+              <td>{{ unit.year }}</td>
+
+              <td>{{ unit.rentPerDay | currency:'LKR ':'symbol' }}</td>
+              <td>
+                <button class="btn btn-accept btn-sm me-3 mb-2  btn-block w-100" data-bs-target="#exampleModalToggle"
+                  data-bs-toggle="modal" (click)="openUpdateModal(unit, bike)">✓ Click to update</button> <br>
+                <button class="btn btn-danger btn-sm me-3 btn-block w-100"
+                  (click)="deleteBikeByRegistration(unit.registrationNumber)">✘ Click to Delete</button>
+              </td>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+  tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Update Bike Details </h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="closeModal()"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="updateForm">
+          <div class="mb-3">
+            <label for="brandName" class="form-label">Bike Brand</label>
+            <input type="text" class="form-control" id="bikeName" placeholder="Bike Brand" formControlName="brandName" >
+
+          </div>
+          <div class="mb-3">
+            <label for="modelName" class="form-label">Bike Model</label>
+            <input type="text" class="form-control" id="bikeName" placeholder="Bike Model"   formControlName="modelName">
+
+          </div>
+          <div class="mb-3">
+            <label for="year" class="form-label">Year </label>
+            <input type="text" class="form-control" id="year" placeholder="Year" formControlName="year">
+
+          </div>
+          <div class="mb-3">
+            <label for="rent" class="form-label">Rent Per Day</label>
+            <input type="text" class="form-control" id="rent" placeholder="Rent Per Day" formControlName="rentPerDay">
+          </div>
+          <div class="mb-3">
+            <label for="bikeImg" class="form-label">Bike Image</label>
+            <input type="file" accept=".jpg, .png" class="form-control" id="bikeImg" (change)="onFileChange($event)"  >
+          </div>
+          <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-bs-dismiss="modal" (click)="updateBike()">Update</button>
+      </div>
+    </div>
+  </div>
+</div>

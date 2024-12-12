@@ -1,0 +1,69 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Poul Jr\\Desktop\\BikeRental\\MS_3-BikeRental\\BikeRentalManagement\\wwwroot\\bike_images\\0d1082ff-c916-47e8-a073-88f8d8ed75b8_download.jpg",
+      "PackagePath": "staticwebassets\\bike_images\\0d1082ff-c916-47e8-a073-88f8d8ed75b8_download.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Poul Jr\\Desktop\\BikeRental\\MS_3-BikeRental\\BikeRentalManagement\\wwwroot\\bike_images\\1b45b413-be5a-4c8a-96f2-6d592db19f16_download.jpg",
+      "PackagePath": "staticwebassets\\bike_images\\1b45b413-be5a-4c8a-96f2-6d592db19f16_download.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Poul Jr\\Desktop\\BikeRental\\MS_3-BikeRental\\BikeRentalManagement\\wwwroot\\bike_images\\5c528984-2a87-483a-9b35-7a99cab65249_download.jpg",
+      "PackagePath": "staticwebassets\\bike_images\\5c528984-2a87-483a-9b35-7a99cab65249_download.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Poul Jr\\Desktop\\BikeRental\\MS_3-BikeRental\\BikeRentalManagement\\wwwroot\\bike_images\\5eccce68-61b6-43d6-9769-aaac2f0cfa26_Capture.PNG",
+      "PackagePath": "staticwebassets\\bike_images\\5eccce68-61b6-43d6-9769-aaac2f0cfa26_Capture.PNG"
+    },
+    {
+      "Id": "C:\\Users\\Poul Jr\\Desktop\\BikeRental\\MS_3-BikeRental\\BikeRentalManagement\\wwwroot\\bike_images\\7f969991-2654-4814-9b71-1c1b79ccdb68_download.jpg",
+      "PackagePath": "staticwebassets\\bike_images\\7f969991-2654-4814-9b71-1c1b79ccdb68_download.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Poul Jr\\Desktop\\BikeRental\\MS_3-BikeRental\\BikeRentalManagement\\wwwroot\\bike_images\\8cb58328-5195-4c10-bb67-892a46f796ee_download.jpg",
+      "PackagePath": "staticwebassets\\bike_images\\8cb58328-5195-4c10-bb67-892a46f796ee_download.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Poul Jr\\Desktop\\BikeRental\\MS_3-BikeRental\\BikeRentalManagement\\wwwroot\\bike_images\\90009034-9920-41e1-91df-1a5f7e13f8a5_Capture.PNG",
+      "PackagePath": "staticwebassets\\bike_images\\90009034-9920-41e1-91df-1a5f7e13f8a5_Capture.PNG"
+    },
+    {
+      "Id": "C:\\Users\\Poul Jr\\Desktop\\BikeRental\\MS_3-BikeRental\\BikeRentalManagement\\wwwroot\\bike_images\\9b68ee4a-f22d-4180-9a23-8a31d56feb42_download.jpg",
+      "PackagePath": "staticwebassets\\bike_images\\9b68ee4a-f22d-4180-9a23-8a31d56feb42_download.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Poul Jr\\Desktop\\BikeRental\\MS_3-BikeRental\\BikeRentalManagement\\wwwroot\\bike_images\\ab54d50b-72ac-484c-a96b-3f9390eaa824_download.jpg",
+      "PackagePath": "staticwebassets\\bike_images\\ab54d50b-72ac-484c-a96b-3f9390eaa824_download.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Poul Jr\\Desktop\\BikeRental\\MS_3-BikeRental\\BikeRentalManagement\\wwwroot\\bike_images\\c5da6e74-50f8-46dc-a4f5-157b6d1b3f61_download.jpg",
+      "PackagePath": "staticwebassets\\bike_images\\c5da6e74-50f8-46dc-a4f5-157b6d1b3f61_download.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Poul Jr\\Desktop\\BikeRental\\MS_3-BikeRental\\BikeRentalManagement\\wwwroot\\bike_images\\d6f38528-b851-409d-bc52-567da32c90a8_download.jpg",
+      "PackagePath": "staticwebassets\\bike_images\\d6f38528-b851-409d-bc52-567da32c90a8_download.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Poul Jr\\Desktop\\BikeRental\\MS_3-BikeRental\\BikeRentalManagement\\wwwroot\\images\\download.jpg",
+      "PackagePath": "staticwebassets\\images\\download.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BikeRentalManagement.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.BikeRentalManagement.props",
+      "PackagePath": "build\\BikeRentalManagement.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.BikeRentalManagement.props",
+      "PackagePath": "buildMultiTargeting\\BikeRentalManagement.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.BikeRentalManagement.props",
+      "PackagePath": "buildTransitive\\BikeRentalManagement.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

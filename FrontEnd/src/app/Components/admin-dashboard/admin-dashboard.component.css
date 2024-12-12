@@ -1,0 +1,84 @@
+
+body {
+    background-color: #f8f9fa;
+  }
+  .sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background-color: #ffffff;
+    height: 100vh;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  .sidebar a {
+    font-size: 1rem;
+    color: #333;
+    text-decoration: none;
+  }
+  .sidebar .nav-link.active {
+    font-weight: bold;
+    color: #007bff;
+  }
+  .content {
+    padding: 20px;
+  }
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .table th, .table td {
+    vertical-align: middle;
+  }
+  .btn-accept {
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+  .btn-decline {
+    color: #fff;
+    background-color: #dc3545;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+  
+  /* External css */
+  .mouseHover:hover{
+    background-color: #1524f0;
+    border-radius: 6px;
+    color: white;
+    transition: 0.1s;
+  }
+
+  .mySideBar{
+    height: 100vh;
+  }
+
+  .rentalLogo {
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #1041e0;
+    font-size: 25px;
+}
+
+.adminComp{
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.adminComp1{
+  font-family: "Lobster", serif;
+  /* font-weight: 400; */
+  /* font-style: normal; */
+  font-size: 35px;
+  letter-spacing: 0.4px;
+  
+
+
+}
+
+

@@ -1,0 +1,210 @@
+<!-- <div class="bike-booking">
+  <h2>Select a Bike to View Booked Dates</h2>
+
+  <label class="form-label" for="registrationNumber">Bike Registration Number:</label>
+  <input class="form-group" id="registrationNumber" type="text" [(ngModel)]="registrationNumber" placeholder="Enter Registration Number" />
+  <button  (click)="getBookedDates()">Check Booked Dates</button>
+
+  <table *ngIf="bookedDates.length > 0">
+    <thead>
+      <tr>
+        <th>From Date</th>
+        <th>To Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let booking of bookedDates">
+        <td>{{ booking.fromDate }}</td>
+        <td>{{ booking.toDate }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="bookedDates.length === 0 ">
+    <p>No booked dates found for this bike.</p>
+  </div>
+</div> -->
+<div class="bookedDetails">
+
+  <!-- <div class="accordion accordion-flush bg-secondary mt-4 " id="accordionFlushExample">
+    <div class="accordion-item">
+      <h1 class="accordion-header " id="flush-headingOne">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+          Select a Bike to View Booked Dates
+        </button>
+      </h1>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+        data-bs-parent="#accordionFlushExample">
+
+
+        <div class="col-auto form-group container">
+          <label for="staticEmail2" class="form-label">Bike Registration Number:</label>
+          <input type="text" class="form-control" id="inputPassword2" [(ngModel)]="registrationNumber"
+            placeholder="Enter Registration Number">
+          <button type="submit" (click)="getBookedDates()" class="btn btn-primary my-3">Check Booked Dates</button>
+        </div>
+
+        <div class="table-responsive container">
+          <table class="table table-bordered table-striped table-hover text-center mt-3" *ngIf="bookedDates.length > 0">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col" class="text-uppercase">From Date</th>
+                <th scope="col" class="text-uppercase">To Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let booking of bookedDates" class="table-info">
+                <td>{{ booking.fromDate }}</td>
+                <td>{{ booking.toDate }}</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div *ngIf="bookedDates.length === 0 ">
+            <p
+              style="text-align: center; font-size: 20px; font-weight: bold; font-family: 'Times New Roman', Times, serif; color: red;">
+              No booked dates found for this bike.</p>
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+    </div>
+  </div> -->
+
+  <div class="container py-5">
+    <h3 class="text-center text-primary mb-4">Click Here to Know This Bike Renting Details</h3>
+  
+    <div class="col-md-6 col-sm-8 mx-auto form-group">
+      <label for="registrationNumber" class="form-label">Bike Registration Number:</label>
+      <input 
+        type="text" 
+        class="form-control border-primary" 
+        id="registrationNumber" 
+        [(ngModel)]="registrationNumber" 
+        placeholder="Enter Registration Number"
+      >
+      <button 
+        type="submit" 
+        (click)="getBookedDates()" 
+        class="btn btn-primary btn-block mt-3"
+      >
+        Check Booked Dates
+      </button>
+    </div>
+  
+    <div class="table-responsive mt-5">
+      <table class="table table-bordered table-striped table-hover text-center" *ngIf="bookedDates.length > 0">
+        <thead class="bg-primary text-white">
+          <tr>
+            <th scope="col" class="text-uppercase">From Date</th>
+            <th scope="col" class="text-uppercase">To Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let booking of bookedDates" class="table-info">
+            <td>{{ booking.fromDate }}</td>
+            <td>{{ booking.toDate }}</td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <div *ngIf="bookedDates.length === 0" class="text-center mt-3">
+        <p class="text-danger fw-bold" style="font-size: 1.2rem; font-family: 'Times New Roman', Times, serif;">
+          No booked dates found for this bike.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+
+<div class="viewBike">
+  <div class="container mt-5">
+    <div class="row">
+      <!-- Bike Information -->
+      <div class="col-md-6">
+        <img [src]="bikeImage" alt="Bike Image" class="bike-image" width="400" height="400"
+          *ngIf="bikeImage; else noImage" />
+        <ng-template #noImage>
+          <p class="text-muted">No image available</p>
+        </ng-template>
+        <h2 class="mt-4 text-uppercase fw-bold">
+          Registration Number: {{ registrationNumber || 'N/A' }}
+        </h2>
+        <p class="text-muted">
+          Rent Per Day: {{ rentPerDay | currency:'LKR' }}
+        </p>
+      </div>
+
+
+
+
+      <!-- Rental Details -->
+      <div class="col-md-6">
+        <form [formGroup]="rentalForm" (ngSubmit)="submitRequest()" class="viewbikeRent">
+          <div class="card p-4 shadow-lg">
+            <h3 class="pricing text-center">Fill Here To Rent... 😎😎😎</h3>
+            <p class="discount text-center">"Ready to hit the road? Rent your dream bike online and ride in style!"</p>
+
+            <!-- Rental Dates -->
+            <div class="mb-3">
+              <label for="start-date" class="form-label">Start Date</label>
+              <input type="date" [min]="getToday()" id="start-date" formControlName="fromDate" class="form-control" (change)="updateEndDateMin()" />
+
+              <label for="end-date" class="form-label mt-3">End Date</label>
+              <input type="date" [min]="rentalForm.get('fromDate')?.value || getToday()" id="end-date" formControlName="toDate" class="form-control" />
+            </div>
+
+            <!-- Locations -->
+            <div class="mb-3">
+              <label for="fromLocation" class="form-label">From Location</label>
+              <input id="fromLocation" type="text" formControlName="fromLocation" class="form-control" />
+
+              <label for="toLocation" class="form-label mt-3">To Location</label>
+              <input id="toLocation" type="text" formControlName="toLocation" class="form-control" />
+              <div id="map" style="width: 100%; height: 400px; margin-top: 20px;"></div>
+
+              <button type="button" (click)="calculateDistance()" class="btn btn-primary w-100 mt-3">Calculate</button>
+            </div>
+
+            <!-- Distance -->
+            <div class="mb-3" *ngIf="distance !== null">
+              <label for="distance" class="form-label">Distance (km)</label>
+              <input type="text" id="distance" class="form-control" [value]="distance + ' km'" disabled />
+            </div>
+
+            <!-- Amount -->
+            <div class="mb-3">
+              <label for="amount" class="form-label">Amount</label>
+              <input id="amount" type="text" class="form-control" [value]="calculateAmount()" disabled />
+            </div>
+
+            <!-- Riding Option -->
+            <div class="mb-4">
+              <label for="riding-option" class="form-label">How are you riding?</label>
+              <select id="riding-option" class="form-select" formControlName="ridingOption">
+                <option value="alone" selected>Alone</option>
+                <option value="with-passenger">With Passenger</option>
+              </select>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary w-100">Submit Rental Request</button>
+          </div>
+        </form>
+
+        <div class="">
+          <button type="button" class="btn btn-success mt-2" [routerLink]="['/user/rentBike']"><i
+              class="bi bi-backspace"></i> Back</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

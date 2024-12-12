@@ -1,0 +1,107 @@
+<div class="container my-4">
+  <div class="search-bar">
+    <!-- Date Range Picker (placeholder) -->
+    <input type="text" class="date-range" placeholder="Search By Brand"   [(ngModel)]="searchBrand">
+
+    <!-- City Input -->
+    <input type="number" class="city-input" placeholder="Search By Rent"  [(ngModel)]="searchRent">
+
+    <!-- Dropdown (placeholder for "All") -->
+    <!-- <div class="dropdown">
+      <select aria-label="Select Category">
+        <option selected>All</option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+      </select>
+    </div> -->
+<!-- 
+    <ul class="nav nav-tabs mb-3">
+      <li class="nav-item">
+        <a class="nav-link" [class.active]="activeTab ==='brand'" (click)="activeTab='brand'">Search By Brand</a>
+
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [class.active]="activeTab ==='rent'" (click)="activeTab='rent'">Search By Rent</a>
+
+      </li>
+
+    </ul> -->
+
+    <!-- Search Button -->
+    <button class="btn btn-search">Search</button>
+  </div>
+</div>
+
+<!-- Bike List -->
+
+
+<div class="bikeList my-5 ">
+  <div class=" bikeDesc container mt-4 mb-5">
+    <h5>Last Minute Offer</h5>
+    <h3>Motorcycle & Scooters for rent</h3>
+  </div>
+
+  <div class="container ">
+    <div class="row justify-content-center">
+
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4" *ngFor="let bike of bikes | search : searchBrand : searchRent">
+        <div class="custom-card card position-relative mb-4">
+          <div class="">
+            <!-- <span class="badge badge-custom">Unlimited Mileage</span> -->
+            <div class="location-text mt-2">
+              <img src="https://www.publicdomainpictures.net/pictures/270000/velka/flag-of-sri-lanka-sri-lanka-flag.jpg"
+                alt="Country Flag" class="me-1" width="20">
+              <span>SriLanka</span>
+              <span>•</span>
+              <span>Bikes</span>
+            </div>
+
+            <div class="stars mt-1">
+              &#9733; &#9733; &#9733; &#9733; &#9733;
+            </div>
+            <h5 class="card-title">Brand : {{ bike.brandName }}</h5>
+            <h6 class="card-title">Model : {{ bike.modelName }}</h6>
+            <div class="" *ngFor="let unit of bike.bikeUnits">
+              <h6 class="card-title">Year : {{ unit.year }}</h6>
+              <p>Registration Number: {{ unit.registrationNumber }} </p>
+              <p class="mb-1 price-text">Price <span class="price">{{ unit.rentPerDay | currency }}</span>/day</p>
+
+              <div class="" *ngIf="unit.bikeImages.length > 0">
+                <img *ngFor="let imgs of unit.bikeImages" [src]="'https://localhost:7000/' + imgs.image"
+                  alt="Motorcycle Image" class="card-image" width="10">
+              </div>
+              <!-- <button class="btn view-btn mt-2" [routerLink]="['/user/viewBike']" >View</button> -->
+              <!-- <button class="btn view-btn mt-2" [routerLink]="['/user/viewBike' +unit.registrationNumber]">View</button> 
+                   -->
+              <button class="btn view-btn mt-2" (click)="viewBike(unit.registrationNumber)">
+                View
+              </button>
+            </div>
+          </div>
+
+
+
+
+
+        </div>
+      </div>
+
+
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled">
+            <a class="page-link">Previous</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,6 @@
+.back{
+    /* background:radial-gradient(rgba(223, 223, 235, 0.93), rgba(140, 176, 255, 0.3)); */
+    background: url(../../../../public/lightBlue.jpg);
+    background-size: cover;
+    /* opacity: 0.5; */
+}

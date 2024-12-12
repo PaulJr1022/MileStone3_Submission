@@ -1,0 +1,62 @@
+<section class="h-100 back">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-8 col-xl-6">
+        <div class="card rounded-3">
+          <div class="card-body p-4 p-md-5">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Update User Info</h3>
+
+            <form class="px-md-2" [formGroup]="updateUserForm" (ngSubmit)="updateUser()">
+
+              <div class="form-outline mb-4">
+                <label for="firstName">First Name <span class="text-danger">*</span></label>
+                <input type="text" id="firstName" class="form-control" placeholder="Enter Your First Name"
+                  formControlName="firstName" />
+              </div>
+
+              <div class="form-outline mb-4">
+                <label for="lastName">Last Name <span class="text-danger">*</span></label>
+                <input type="text" id="lastName" class="form-control" placeholder="Enter Your Last Name"
+                  formControlName="lastName" />
+              </div>
+
+              <div class="form-outline mb-4">
+                <label for="email">Email Address<span class="text-danger">*</span></label>
+                <input type="email" id="email" class="form-control" [disabled]="true" formControlName="email" />
+              </div>
+
+              <div class="form-outline mb-4">
+                <label for="nic">NIC:<span class="text-danger">*</span></label>
+                <input id="nic" formControlName="nic" type="text" [disabled]="true" class="form-control" />
+              </div>
+
+              <div class="form-outline mb-4">
+                <label for="mobileNumber">Mobile Number <span class="text-danger">*</span></label>
+                <input type="text" id="mobileNumber" class="form-control" placeholder="Eg: 0771234567"
+                  formControlName="mobileNumber" />
+              </div>
+
+              <div class="form-outline mb-4">
+                <label for="licenseNumber">License Number <span class="text-danger">*</span></label>
+                <input type="text" id="licenseNumber" class="form-control" placeholder="Eg: B4647245"
+                  formControlName="licenseNumber" [disabled]="true" />
+              </div>
+
+              <div class="form-outline mb-4">
+                <h4>Change Password</h4>
+                <label for="password">Password <span class="text-danger">*</span></label>
+                <input type="password" id="password" class="form-control" placeholder="Enter New Password"
+                  formControlName="password" />
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg mb-1" [disabled]="updateUserForm.invalid">Update
+                User</button>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

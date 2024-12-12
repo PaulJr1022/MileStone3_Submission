@@ -1,0 +1,227 @@
+
+.login-hover{
+    border:1px solid blue;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(50, 29, 247);
+}
+
+.signup-hover{
+    border:1px solid blue;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+}
+
+.signup-hover:hover{
+    border:1px solid blue;
+    background-color:  rgb(50, 29, 247);
+    
+}
+.login-hover:hover{
+    background-color: rgb(50, 29, 247);
+    color: white;
+}
+
+.text-hover:hover{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.footer {
+    background-color: #e9f1f0; /* Light gray background */
+    padding: 40px 0;
+    color: #374151; /* Dark gray text */
+    bottom: 0;
+    width: 100%;
+    /* position: fixed; */
+}
+.footer a {
+    color: #374151;
+    text-decoration: none;
+}
+.footer a:hover {
+    color: #0d6efd; /* Bootstrap's primary color on hover */
+    text-decoration: underline;
+}
+.footer .social-icons a {
+    font-size: 20px;
+    margin-right: 15px;
+    color: #374151;
+    transition: color 0.3s ease;
+}
+.footer .social-icons a:hover {
+    color: #0d6efd;
+}
+
+/* LandingPageCss */
+
+.slideText{
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: #374151;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    overflow: hidden;
+}
+.search-bar input,
+.search-bar select {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding: 10px;
+}
+.search-bar input::placeholder {
+    color: #888;
+}
+.search-bar .date-range,
+.search-bar .city-input {
+    flex: 1;
+    min-width: 100px;
+}
+.search-bar .dropdown {
+    padding: 0 10px;
+    border-left: 1px solid #ccc;
+}
+.search-bar .btn-search {
+    border-radius: 25px;
+    background-color: #4A90E2;
+    color: white;
+    padding: 5px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.search-bar .btn-search:hover {
+    background-color: #357ABD;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .search-bar {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px;
+        gap: 10px;
+    }
+    .search-bar .dropdown {
+        border-left: none;
+        border-top: 1px solid #ccc;
+    }
+    .search-bar .btn-search {
+        width: 100%;
+    }
+}
+
+.custom-card {
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+.custom-card:hover {
+    transform: scale(1.05);
+}
+.badge-custom {
+    background-color: #78dcca;
+    color: #ffffff;
+    font-size: 0.75rem;
+    padding: 5px 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.card-image {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+.location-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+.stars {
+    color: #FFD700;
+}
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333333;
+    margin-top: 10px;
+}
+.price-text {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333333;
+}
+.price {
+    color: #007bff;
+    font-size: 1.5rem;
+}
+.view-btn {
+    background-color: #4A90E2;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 5px 15px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.bikeList{
+    background-color: rgba(161, 157, 157, 0.072);
+    /* margin-top: 4%; */
+}
+
+.bikeDesc{
+    text-transform: uppercase;
+}
+
+.bikeDesc h5{
+    color: #007bff;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.bikeDesc h3{
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.featureText h5{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #007bff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.featureText h4{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    /* color: #007bff; */
+    text-align: center;
+    font-weight: bold;
+}

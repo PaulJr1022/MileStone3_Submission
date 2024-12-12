@@ -1,0 +1,114 @@
+<div class="container my-5">
+    <div class="row g-4">
+      <!-- Form Section -->
+      <div class="col-lg-7">
+        <div class="form-container">
+          <h4 class="text-uppercase text-primary">Hey... Nice Motorbike.</h4>
+          <h2 class="fw-bold mb-4">Reservation Details</h2>
+
+          <form>
+            <h5 class="fw-bold">Driver Information</h5>
+            <p>This is the information that will be used for the Rental Confirmation</p>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Driver's Name *</label>
+                <input type="text" class="form-control" placeholder="Enter your name" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email *</label>
+                <input type="email" class="form-control" placeholder="Enter your email" required>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Driver's License Country *</label>
+                <select class="form-select" required>
+                  <option value="">Select Country</option>
+                  <option value="us">United States</option>
+                  <option value="uk">United Kingdom</option>
+                  <option value="ca">Canada</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Phone *</label>
+                <div class="input-group">
+                  <span class="input-group-text">+94</span>
+                  <input type="tel" class="form-control" placeholder="Enter your phone number" required>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">License Category *</label>
+                <select class="form-select" required>
+                  <option value="">Select Category</option>
+                  <option value="a">Category A</option>
+                  <option value="b">Category B</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Date of Birth *</label>
+                <input type="date" class="form-control" required>
+              </div>
+            </div>
+
+            <h5 class="fw-bold mt-4">Managing Your Booking <span class="text-muted">(Optional)</span></h5>
+            <p>Having an account makes it easier to manage your booking at a later date.</p>
+            <div class="d-flex gap-3">
+              <button type="button" class="btn btn-light border w-100">
+                <i class="bi bi-google"></i> Continue with Google
+              </button>
+              <button type="button" class="btn btn-light border w-100">
+                <i class="bi bi-facebook"></i> Continue with Facebook
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Summary Section -->
+      <div class="col-lg-5">
+        <div class="summary-card">
+          <h5 class="fw-bold">BMW R 1250 GS Triple Black (2023)</h5>
+          <p class="text-muted">Located in Marrakech</p>
+          <p>⭐ ⭐ ⭐ ⭐ ⭐</p>
+
+          <div class="d-flex justify-content-between">
+            <p><strong>Pickup</strong></p>
+            <p>Nov 20, 2024 <br><small>09:00  Rental Office</small></p>
+          </div>
+          <div class="d-flex justify-content-between">
+            <p><strong>Drop-off</strong></p>
+            <p>Nov 21, 2024 <br><small>09:00  Rental Office</small></p>
+          </div>
+
+          <div class="d-flex justify-content-between mt-3">
+            <p>Motorbike Rental (1 day)</p>
+            <p>190,00 €</p>
+          </div>
+
+          <div class="d-flex justify-content-between">
+            <p>Add-ons</p>
+            <p>0,00 €</p>
+          </div>
+
+          <div class="total-section">
+            <div class="d-flex justify-content-between">
+              <h6>Total</h6>
+              <h6 class="highlight">190,00 €</h6>
+            </div>
+            <div class="d-flex justify-content-between mt-2">
+              <p>Due Now</p>
+              <p>28,50 €</p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p>Due on Pickup</p>
+              <p>161,50 €</p>
+            </div>
+          </div>
+
+          <button class="btn btn-primary w-100 mt-4">PAY 28,50 €</button>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,54 @@
+<div class="outSet">
+    <div class=" mb-5">
+        <div class="mt-2 container">
+            <!-- Tabs -->
+            <ul class="nav nav-tabs mb-4">
+                <li class="nav-item">
+                    <a class="nav-link active" [routerLink]="['/admin/reports']">Inventory </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " [routerLink]="['/admin/reportUsers']">User History</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link " [routerLink]="['/admin/reportUsers']">UserHistory</a>
+                </li>              -->
+            </ul>
+
+       
+            
+            <div class=" table-custom ">
+              <div class="booking-header my-3">
+                <h5>Inventory and User Report</h5>
+                <button class="btn btn-outline-secondary"><i class="bi bi-printer-fill"></i> Print</button>
+              </div>
+        
+        
+              <div class="container">
+                <h6>Inventory Management</h6>
+                <table class="table table-hover table-bordered" style="width: 95%; margin-bottom: 20px;">
+                  <thead>
+                    <tr>
+                      <th>Registration Number</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let bike of bikes">
+                      <td>{{ bike.registrationNumber }}</td>
+                      <td>{{ bike.status }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+
+              <div class="container">
+                <h4 class="text-center">Monthly Rental Trends</h4>
+                <div class="chart-container">
+                  <canvas id="rentalChart"></canvas>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+</div>

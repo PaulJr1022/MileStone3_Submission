@@ -1,0 +1,21 @@
+@media (min-width: 1025px) {
+    .h-custom {
+        height: 100vh !important;
+    }
+}
+
+.back{
+    background: url(https://www.pixelstalk.net/wp-content/uploads/2016/06/Light-blue-wallpaper-hd-quality.jpg   );
+    background-size: cover;
+}
+
+#video {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  #capturedImage {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 10px;
+  }

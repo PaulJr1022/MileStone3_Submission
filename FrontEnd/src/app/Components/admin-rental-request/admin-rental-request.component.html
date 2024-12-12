@@ -1,0 +1,101 @@
+<div class="outSet">
+  <ul class="nav nav-tabs mb-4">
+    <li class="nav-item">
+      <a class="nav-link " [routerLink]="['/admin/dashHome']">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " [routerLink]="['/admin/addBike']">Bike List</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" [routerLink]="['/admin/rentalRequest']">Bike Request</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " [routerLink]="['/admin/updateBike']">Update Bike</a>
+    </li>
+  </ul>
+
+  <div class="table-custom">
+    <div class="booking-header my-3">
+      <h5>New Online Requests</h5>
+      <button class="btn btn-outline-secondary" (click)="printTableAsPDF()"><i class="bi bi-printer-fill"></i>
+        Print</button>
+    </div>
+
+    <table class="table table-hover table-bordered" style="width: 95%; margin-bottom: 20px;">
+      <thead>
+        <tr>
+          <th>Bike Id</th>
+          <th>User Id</th>
+          <th>Request Id</th>
+          <th>Bike Reg</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Total Price</th>
+          <th>Action</th>
+          <!-- <th>Status</th> -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let request of rentalRequests">
+          <td>{{ request.bikeId }}</td>
+          <td>{{ request.userId }}</td>
+          <td>{{request.requestId}}</td>
+          <td>{{ request.registrationNumber }}</td>
+          <td>{{ request.fromDate | date }}</td>
+          <td>{{ request.toDate | date }}</td>
+          <td>{{ request.amount | currency }}</td>
+          <td>
+            <button class="btn btn-accept btn-sm me-3" (click)="acceptRequest(request.requestId, request)"
+              [disabled]="request.status === 'Pending'|| request.status === 'Rejected' || request.status === 'Returned' ||  request.status === 'Waiting' ">
+              {{request.status==='Pending' ? '✓ Accepted' : '✓ Accept'}}
+
+            </button>
+            <button class="btn btn-decline btn-sm" (click)="declineRequest(request.requestId)" [disabled]="request.status === 'Rejected' || request.status === 'Pending' || request.status === 'Returned' || request.status === 'Waiting'">
+              {{request.status==='Rejected' ? '✕ Declined' : '✕ Decline'}}
+
+            </button>
+            <button class="btn btn-return btn-primary mx-2 btn-sm" (click)="returnRequest(request.requestId)"
+            [disabled]="request.status === 'Returned'|| request.status === 'Rejected' || request.status === 'Waiting'"> {{request.status==='Returned' ? ' Returned' : ' Return'}}
+            </button>
+            <button class="btn btn-outline-secondary btn-sm me-3" (click)="viewDetails(request.userId)">
+              View
+            </button>
+          </td>
+          <!-- <td [ngStyle]="{
+            'color': request.status === 'Pending' ? 'Blue' : request.status === 'Returned' ? 'Green' : request.status === 'Rejected' ? 'Red' : ''}" style="font-family: 'Times New Roman', Times, serif; font-weight: bold;">
+            {{ request.status }}
+          </td> -->
+
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="rentalHistoryModal" tabindex="-1" aria-labelledby="rentalHistoryModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="rentalHistoryModalLabel">Rental History</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div *ngIf="rentalDetails">
+            <div class="card mb-3" *ngFor="let detail of rentalDetails">
+              <div class="card-body">
+                <h5 class="card-title">{{ detail.label }}</h5>
+                <p class="card-text">Value: {{ detail.value }}</p>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="!rentalDetails">
+            <p>Loading...</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

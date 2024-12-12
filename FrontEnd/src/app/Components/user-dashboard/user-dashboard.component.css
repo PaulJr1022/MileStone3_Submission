@@ -1,0 +1,33 @@
+.form-container {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+  }
+
+  .summary-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+  }
+
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+    font-weight: bold;
+  }
+
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+
+  .highlight {
+    color: #007bff;
+    font-weight: bold;
+  }
+
+  .total-section {
+    border-top: 2px solid #ddd;
+    margin-top: 15px;
+    padding-top: 10px;
+  }
