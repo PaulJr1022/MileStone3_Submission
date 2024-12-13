@@ -68,6 +68,13 @@ export class UserRentalRequestComponent implements OnInit, AfterViewInit {
     this.initMap();
   }
 
+  updateEndDateMin() {
+    const fromDate = this.updateForm.get('fromDate')?.value;
+    if (fromDate) {
+      this.updateForm.get('toDate')?.setValue('');
+    }
+  }
+
   initMap() {
     this.map = new google.maps.Map(document.getElementById('map') as HTMLElement, {
       center: { lat: 0, lng: 0 },
