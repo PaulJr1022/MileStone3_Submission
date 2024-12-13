@@ -24,7 +24,7 @@
     <table class="table table-hover table-bordered" style="width: 95%; margin-bottom: 20px;">
       <thead>
         <tr>
-          <th>Bike Id</th>
+          <!-- <th>Bike Id</th> -->
           <th>User Id</th>
           <th>Request Id</th>
           <th>Bike Reg</th>
@@ -37,7 +37,7 @@
       </thead>
       <tbody>
         <tr *ngFor="let request of rentalRequests">
-          <td>{{ request.bikeId }}</td>
+          <!-- <td>{{ request.bikeId }}</td> -->
           <td>{{ request.userId }}</td>
           <td>{{request.requestId}}</td>
           <td>{{ request.registrationNumber }}</td>
@@ -46,16 +46,16 @@
           <td>{{ request.amount | currency }}</td>
           <td>
             <button class="btn btn-accept btn-sm me-3" (click)="acceptRequest(request.requestId, request)"
-              [disabled]="request.status === 'Pending'|| request.status === 'Rejected' || request.status === 'Returned'  ">
+              [disabled]="request.status === 'Pending'|| request.status === 'Rejected' || request.status === 'Returned' || request.status === 'Cancelled'  ">
               {{request.status==='Pending' ? '✓ Accepted' : '✓ Accept'}}
 
             </button>
-            <button class="btn btn-decline btn-sm" (click)="declineRequest(request.requestId)" [disabled]="request.status === 'Rejected' || request.status === 'Pending' || request.status === 'Returned' ">
+            <button class="btn btn-decline btn-sm" (click)="declineRequest(request.requestId)" [disabled]="request.status === 'Rejected' || request.status === 'Pending' || request.status === 'Returned' || request.status === 'Cancelled' ">
               {{request.status==='Rejected' ? '✕ Declined' : '✕ Decline'}}
 
             </button>
             <button class="btn btn-return btn-primary mx-2 btn-sm" (click)="returnRequest(request.requestId)"
-            [disabled]="request.status === 'Returned'|| request.status === 'Rejected' || request.status === 'Waiting'"> {{request.status==='Returned' ? ' Returned' : ' Return'}}
+            [disabled]="request.status === 'Returned'|| request.status === 'Rejected' || request.status === 'Waiting' || request.status === 'Cancelled'"> {{request.status==='Returned' ? ' Returned' : ' Return'}}
             </button>
             <button class="btn btn-outline-secondary btn-sm me-3" (click)="viewDetails(request.userId)">
               View
