@@ -658,8 +658,10 @@
 .secondHead {
     /* color: #35d36f; */
     font-size: 22px;
-    font-weight: 300;
-    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
+    color: white;
+    letter-spacing: 1px;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -694,13 +696,15 @@
     margin-top: 10%;
     letter-spacing: 1px;
 }
-.secondHead{
+/* .secondHead{
     color: rgb(255, 255, 255);
     font-family:"Shrikhand", serif; 
-}
+} */
 
 .secondRegister{
-    font-family:"Shrikhand", serif; 
+    font-family:'Times New Roman', Times, serif;
+    letter-spacing: 1px; 
+    font-weight: bold;
 }
 
 
