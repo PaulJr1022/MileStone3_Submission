@@ -65,14 +65,15 @@ body {
 }
 
 .adminComp{
-  font-family: "Shrikhand", serif;
-  font-weight: 400;
-  font-style: normal;
+  font-family:'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 20px;
+  /* font-style: normal; */
 }
 
 .adminComp1{
-  font-family: "Lobster", serif;
-  /* font-weight: 400; */
+  /* font-family:'Times New Roman', Times, serif; */
+  font-weight: 300;
   /* font-style: normal; */
   font-size: 35px;
   letter-spacing: 0.4px;
