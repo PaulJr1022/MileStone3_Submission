@@ -80,11 +80,11 @@
               </div>
               <div class="form-group">
                 <label for="fromDate">From Date:</label>
-                <input id="fromDate" type="date" [min]=" getToday()"  formControlName="fromDate" class="form-control" />
+                <input id="fromDate" type="date" [min]=" getToday()"  formControlName="fromDate" class="form-control"  (change)="updateEndDateMin()"/>
               </div>
               <div class="form-group">
                 <label for="toDate">To Date:</label>
-                <input id="toDate" type="date" [min]=" getToday()"  formControlName="toDate" class="form-control" />
+                <input id="toDate" type="date" [min]="updateForm.get('fromDate')?.value || getToday()"  formControlName="toDate" class="form-control" />
               </div>
               <div class="">
                 <div class="form-group">
